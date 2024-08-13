@@ -1,4 +1,4 @@
-package com.app;
+package com.app.model;
 import javax.persistence.*;
 import javax.persistence.Table;
 
@@ -24,6 +24,9 @@ public class User {
 
     @Column(name = "PASSWORD") // Map to the PASSWORD column in the database
     private String password;
+    
+    @Column(name = "EMAIL") // Map to the PASSWORD column in the database
+    private String email;
 	
 	
 	public String getUserId() {
@@ -38,10 +41,18 @@ public class User {
 	public void setPassword(String password) {
 		this.password = password;
 	}
+	
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
 	@Override
 	public String toString() {
-		return "User [userId=" + userId + ", password=" + password + "]";
+		return "User [userId=" + userId + ", password=" + password + ", email=" + email + "]";
 	}
+	
 
 	
 
